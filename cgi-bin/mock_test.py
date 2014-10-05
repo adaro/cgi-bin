@@ -10,7 +10,7 @@ import urllib2
 from StringIO import StringIO
 
 def mock_response(req):
-    if req.get_full_url() == "http://wdcdn.net/rss/presentation/library/client/iowa/id/128b053b916ea1f7f20233e8a26bc45d":
+    if req.get_full_url() == "http://www.npr.org/rss/rss.php?id=1001":
         resp = urllib2.addinfourl(StringIO("mock response:"), "mock message", req.get_full_url())
         resp.code = 200
         resp.msg = "OK"
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     #the behaviour of urlopen()
     my_opener = urllib2.build_opener(MockHTTPHandler)
     urllib2.install_opener(my_opener)
-    url = "http://wdcdn.net/rss/presentation/library/client/iowa/id/128b053b916ea1f7f20233e8a26bc45d"
+    url = "http://www.npr.org/rss/rss.php?id=1001"
     response=urllib2.urlopen(url)
     print response.read()
     print response.code
