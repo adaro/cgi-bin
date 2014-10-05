@@ -3,13 +3,13 @@
 ###
 #Functional Unit Test
 #tests instance methods of
-#server.WireDriveTest class
+#server.NprFeed class
 ###
 
 #import unittest std lib
 import unittest
-#import WireDriveTest class from server module
-from server import WireDriveTest
+#import NprFeed class from server module
+from server import NprFeed
 
 class MyTest(unittest.TestCase):
     """
@@ -30,7 +30,7 @@ class MyTest(unittest.TestCase):
         #instantiate class, run instance method and
         #is_instance_assertion to determine if entry_list
         #is of type: list 
-        wd_instance = WireDriveTest()        
+        wd_instance = NprFeed()        
         entry_list = wd_instance.return_list()
         msg_str = "entries is not of type: list"
         self.is_instance_assertion(entry_list, list, msg_str)
@@ -39,7 +39,7 @@ class MyTest(unittest.TestCase):
         #instantiate class, run instance method and
         #is_instance_assertion to determine if items
         #is of type: list        
-        wd_instance = WireDriveTest() 
+        wd_instance = NprFeed() 
         items = wd_instance.fetch_item()
         msg_str = "items is not of type: list"
         self.is_instance_assertion(items, list, msg_str)
@@ -48,7 +48,7 @@ class MyTest(unittest.TestCase):
         #instantiate class, run instance method and
         #bool_assertion to determine if bool_expr
         #returns True         
-        wd_instance = WireDriveTest()
+        wd_instance = NprFeed()
         items = wd_instance.fetch_item()
         items_list = wd_instance.loop_items(items)
         items_length = len(items_list)
