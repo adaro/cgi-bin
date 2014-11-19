@@ -1,5 +1,5 @@
 ####
-#This file is a "wrapper" for the WireDriveTest class.
+#This file is a "wrapper" for the NprFeed class.
 #also acts as our "template" for (in this case) printing our HTML.
 #This wrapper helps us separate presentation layer from our business logic
 #For the sake of simplicity we will just print the HTML.
@@ -24,7 +24,7 @@ class Wrapper(object):
         #print HTML. Keeping it simple =) 
         print("Content-type: text/html")
         print
-        print("<title>WireDrive Test</title>")
+        print("<title>NprFeed Test</title>")
         print("<h1> Smallest Thumbnail </h1>")
         print("<hr>")
         #loop over entry_list, and get the min value for 'fileSize'
